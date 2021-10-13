@@ -1,22 +1,22 @@
 import React from 'react'
-import { ChannelList , useChatContect } from 'stream-chat-react';
-import {ChannelSearch , TeamChannelList , TeamChannelPreview} from './';
+import { ChannelList, useChatContect } from 'stream-chat-react';
+import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './';
 import Cookies from 'universal-cookie';
 import AppIcon from '../assets/chatApp.png'
 import LogoutIcon from '../assets/logout.png'
 
 
-const SideBar = ()=>(
+const SideBar = () => (
     <div className="channel-list__sidebar">
         <div className="channel-list__sidebar__icon1">
             <div className="icon1__inner">
-                <img src={AppIcon} alt="Hospital" width="30"/>
+                <img src={AppIcon} alt="Hospital" width="30" />
             </div>
 
         </div>
         <div className="channel-list__sidebar__icon2">
             <div className="icon1__inner">
-                <img src={LogoutIcon} alt="Logout" width="30"/>
+                <img src={LogoutIcon} alt="Logout" width="30" />
             </div>
 
         </div>
@@ -24,7 +24,7 @@ const SideBar = ()=>(
     </div>
 )
 
-const Header = ()=>(
+const Header = () => (
     <div className="channel-list__header">
         <p className="channel-list__header__text">Chat Application</p>
     </div>
@@ -33,10 +33,22 @@ const Header = ()=>(
 const ChanellListContainer = () => {
     return (
         <>
-            <SideBar/>
+            <SideBar />
             <div className="channel-list__list__wrapper">
-                <Header/>
-                <ChannelSearch/>
+                <Header />
+                <ChannelSearch />
+                <ChannelList
+                    filter={{}}
+                    channelRenderFilterFn={() => { }}
+                    List={(ListProps) => (
+                        <TeamChannelList
+
+                            {...ListProps}
+                            type = "team"
+                        />
+
+                    )}
+                />
             </div>
         </>
     )
