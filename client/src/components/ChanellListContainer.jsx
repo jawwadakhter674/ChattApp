@@ -44,9 +44,34 @@ const ChanellListContainer = () => {
                         <TeamChannelList
 
                             {...ListProps}
-                            type = "team"
+                            type="team"
                         />
 
+                    )}
+                    Preview={(priviewProps) => (
+                        <TeamChannelPreview
+                            {...priviewProps}
+                            type="team"
+                        />
+                    )}
+                />
+
+                <ChannelList
+                    filter={{}}
+                    channelRenderFilterFn={() => { }}
+                    List={(ListProps) => (
+                        <TeamChannelList
+
+                            {...ListProps}
+                            type="messaging"
+                        />
+
+                    )}
+                    Preview={(priviewProps) => (
+                        <TeamChannelPreview
+                            {...priviewProps}
+                            type="messaging"
+                        />
                     )}
                 />
             </div>
