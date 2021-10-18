@@ -25,9 +25,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  
     padding: 2rem;
-    background: #005fff;
+    background: #af1515d3;
   }
   
   .auth__form-container_image {

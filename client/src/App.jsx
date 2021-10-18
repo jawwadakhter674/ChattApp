@@ -8,11 +8,11 @@ import './App.css'
 const apiKey = 'rybud6mqjvyb';
 const client = StreamChat.getInstance(apiKey);
 
-const authToken = false;
+const authToken = true;
 
 
 const App = () => {
-    if(!authToken) return <Auth/>
+    if(authToken) return <Auth/>
     return (
         <div className="app__wrapper">
 

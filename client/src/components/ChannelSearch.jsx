@@ -20,6 +20,7 @@ const ChannelSearch = () => {
         setLoading(true);
         setQuery(event.target.value);
         getChannels(event.target.value);
+        console.log(event.target.value)
     }
 
     return (
